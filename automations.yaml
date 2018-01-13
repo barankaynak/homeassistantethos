@@ -1,0 +1,11 @@
+- action:
+  - data:
+      message: Alert! Hash rate is {{states.sensor.ethos.state_with_unit}}
+    service: notify.ethminerstelegram
+  alias: EthOSAlert
+  condition: []
+  id: '1515789290000'
+  trigger:
+  - below: '360'
+    entity_id: sensor.ethos
+    platform: numeric_state

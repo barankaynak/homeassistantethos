@@ -1,0 +1,14 @@
+telegram_bot:
+  - platform: polling
+    api_key: 12341234:xxxxxxxxxxxxxxxxx
+    allowed_chat_ids:
+      - 1111111
+      - -111111
+
+notify:
+  - name: MyTelegram
+    platform: telegram
+    chat_id: 1111111
+  - name: EthMinersTelegram
+    platform: telegram
+    chat_id: -1111111
