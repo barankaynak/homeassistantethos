@@ -12,3 +12,10 @@ notify:
   - name: EthMinersTelegram
     platform: telegram
     chat_id: -1111111
+    
+
+sensor:
+  - platform: rest
+    resource: http://xyzxyz.ethosdistro.com/?json=yes
+    name: ethos
+    value_template: '{{ value_json.total_hash }}'
